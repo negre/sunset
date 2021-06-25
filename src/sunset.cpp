@@ -143,12 +143,12 @@ double SunSet::calcMeanObliquityOfEcliptic(double t) const
 
 double SunSet::calcGeomMeanLongSun(double t) const
 {
-    if (std::isnan(t)) {
-        return nan("");
+    if (/*std::*/isnan(t)) {
+        return NAN;//nan("");
     }
     double L = 280.46646 + t * (36000.76983 + 0.0003032 * t);
 
-    return std::fmod(L, 360.0);
+    return /*std::*/fmod(L, 360.0);
 }
 
 double SunSet::calcObliquityCorrection(double t) const
@@ -581,6 +581,6 @@ int SunSet::moonPhase(int fromepoch) const
  */
 int SunSet::moonPhase() const
 {
-    time_t t = std::time(0);
+    time_t t = /*std::*/time(0);
     return moonPhase(static_cast<int>(t));
 }

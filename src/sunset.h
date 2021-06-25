@@ -26,8 +26,12 @@
 #ifndef __SUNPOSITION_H__
 #define __SUNPOSITION_H__
 
-#include <cmath>
-#include <ctime>
+//#include <cmath>
+//#include <ctime>
+
+#include <math.h>
+#include <time.h>
+#include <float.h>
 
 #ifndef M_PI
   #define M_PI 3.14159265358979323846264338327950288
